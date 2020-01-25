@@ -9,17 +9,17 @@ import CreateExercise from './components/create-exercise.component'
 import CreateUser from './components/create-user.component'
 
 function App() {
-  return (
-    <Router>
-      <Navbar />
-      <div className='m-3'>
-          <Route path='/' exact component={ExerciseList} />
-          <Route path='/edit/:id' component={EditExercise} />
-          <Route path='/create' component={CreateExercise} />
-          <Route path='/user' component={CreateUser} />
-      </div>
-    </Router>
-  );
+    return (
+        <Router>
+            <div className='container'>
+                <Navbar />
+                <Route path='/' exact component={ExerciseList} />
+                <Route path='/edit/:id' component={EditExercise} />
+                <Route path='/create' component={CreateExercise} />
+                <Route path='/user' component={CreateUser} />
+            </div>
+        </Router>
+    );
 }
 
 export default App;
